@@ -16,7 +16,6 @@ The Very Awesome Algorithm Visualiser (VAAV) is an educational tool aimed at hel
 - **React**: Frontend library for building a dynamic, component-based UI.
 - **Vite**: Build tool for fast development with Hot Module Replacement (HMR).
 - **JavaScript**: Core logic for algorithm implementation and animations.
-- **ESLint**: Ensures code quality with linting rules.
 - **HTML/CSS**: Structure and styling of the application.
 - **Git**: Version control hosted on GitHub.
 
