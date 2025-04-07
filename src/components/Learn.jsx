@@ -66,10 +66,7 @@ ENDSUB
             Merge Sort divides the array into halves, recursively sorts them,
             and merges them back (AQA/OCR).
           </p>
-          <p>
-            Stable and efficienlarg (Edexcel FM D2)e larg (Edexcel FM D2)e data
-            (Edexcel FM D2).
-          </p>
+          <p>Stable and efficient large data (Edexcel FM D2).</p>
         </>
       ),
       pseudocode: `
@@ -118,10 +115,7 @@ ENDSUB
             Quick Sort picks a pivot, partitions the array, and recursively
             sorts sub-arrays (AQA/OCR).
           </p>
-          <p>
-            Efficient average case with last-e (Edexcel FM D1)lement (Edexcel FM
-            D1) pivot (Edexcel FM D1).
-          </p>
+          <p>Efficient average case with last-element pivot (Edexcel FM D1).</p>
         </>
       ),
       pseudocode: `
@@ -156,7 +150,7 @@ ENDSUB
         <>
           <p>
             Linear Search checks each element sequentially until the target is
-            found or the lis (AQA/OCR)t ends (AQA/OCR).
+            found or the list ends (AQA/OCR).
           </p>
           <p>Basic and works on unsorted data (Edexcel FM D1).</p>
         </>
@@ -213,10 +207,7 @@ ENDSUB
             Exponential Search finds a range by doubling bounds, then applies
             Binary Search (OCR extension).
           </p>
-          <p>
-            Optimises for large sorted (Edexcel FM D2 optimisation)arrays
-            (Edexcel FM D2 optimisation).
-          </p>
+          <p>Optimises for large sorted arrays (Edexcel FM D2 optimisation).</p>
         </>
       ),
       pseudocode: `
