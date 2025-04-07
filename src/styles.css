@@ -1,0 +1,363 @@
+:root {
+  --primary-color: #2563eb;
+  --primary-hover: #0b4df3;
+  --secondary-color: #1e293b;
+  --background-color: #0f172a;
+  --text-color: #f8fafc;
+  --text-secondary: #cbd5e1;
+  --sorted-bar: #22c55e;
+  --comparing-bar: #f59e0b;
+  --unsorted-bar: #3b82f6;
+  --not-found-bar: #ef4444;
+  --disabled: #9ca3af;
+  --transition-speed: all 0.2s ease;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+}
+
+.navigation {
+  position: sticky;
+  top: 0;
+  width: 100%;
+  background: var(--secondary-color);
+  padding: 10px 0;
+  z-index: 1000;
+}
+
+.navigation ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+.navigation li {
+  margin: 0 20px;
+}
+
+.navigation a {
+  color: var(--text-color);
+  text-decoration: none;
+  font-weight: 700;
+  transition: color var(--transition-speed);
+}
+
+.navigation a:hover {
+  color: var(--sorted-bar);
+}
+
+.home {
+  padding: 40px;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+}
+
+.home p {
+  font-size: 1.2rem;
+  color: var(--text-secondary);
+}
+
+.sections {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.section-card {
+  background: var(--secondary-color);
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  transition: transform var(--transition-speed);
+}
+
+.section-card:hover {
+  transform: scale(1.05);
+}
+
+.section-card h2 {
+  margin: 0 0 10px 0;
+}
+
+.section-card p {
+  color: var(--text-secondary);
+  margin: 0 0 15px 0;
+}
+
+.section-card a {
+  color: var(--sorted-bar);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.visualiser {
+  padding: 40px;
+}
+
+.visualiser .controls {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.visualiser select,
+.visualiser button,
+.visualiser input {
+  padding: 10px 20px;
+  background: var(--primary-color);
+  color: var(--text-color);
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background var(--transition-speed);
+}
+
+.visualiser button:disabled,
+.visualiser input:disabled {
+  background: var(--disabled);
+  cursor: not-allowed;
+}
+
+.bars-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 150px;
+  gap: 4px;
+}
+
+.sorting-bar {
+  background-color: var(--unsorted-bar);
+  width: 30px;
+  border-radius: 10px 10px 0 0;
+  transition: var(--transition-speed);
+}
+
+.sorting-bar.is-comparing {
+  background-color: var(--comparing-bar);
+}
+
+.sorting-bar.is-sorted {
+  background-color: var(--sorted-bar);
+}
+
+.sorting-bar.is-found {
+  background-color: var(--sorted-bar);
+}
+
+.sorting-bar.is-not-found {
+  background-color: var(--not-found-bar);
+}
+
+.stats-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  background-color: var(--secondary-color);
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+.stats-item {
+  padding: 5px 15px;
+  min-width: 120px;
+}
+
+.stats-item h4 {
+  margin: 5px;
+  color: var(--text-color);
+}
+
+.stats-item p {
+  color: var(--text-secondary);
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.learn {
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.learn .sidebar {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.learn .sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  max-width: 1000px;
+}
+
+.learn .sidebar li {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-align: center;
+  cursor: pointer;
+  transition: background var(--transition-speed), transform 0.2s ease;
+}
+
+.learn .sidebar li:hover {
+  background: var(--primary-hover);
+  transform: scale(1.05);
+}
+
+.learn .sidebar li.selected {
+  background: var(--sorted-bar);
+  font-weight: bold;
+}
+
+.learn .content {
+  width: 100%;
+  max-width: 1000px;
+  background: var(--secondary-color);
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  text-align: left;
+  margin: 20px auto;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.learn .content button {
+  background: var(--primary-color);
+  color: var(--text-color);
+  padding: 12px 20px;
+  font-size: 1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.learn .content button:hover {
+  background: var(--primary-hover);
+}
+
+.learn .content button:disabled {
+  background: var(--disabled);
+  cursor: not-allowed;
+  opacity: 0.7;
+}
+
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px;
+  min-height: 100vh;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .navigation ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sections {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .visualiser-container {
+    max-width: 100%;
+    padding: 10px;
+  }
+
+  .learn {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .learn .sidebar {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .learn .content {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .home h1 {
+    font-size: 2rem;
+  }
+
+  .home p {
+    font-size: 1rem;
+  }
+
+  .section-card {
+    width: 100%;
+    margin: 0 auto;
+  }
+
+  .learn {
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 15px;
+    margin: 0 auto;
+    box-sizing: border-box;
+  }
+
+  .learn .sidebar {
+    width: auto;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+
+  .learn .content {
+    font-size: 0.9rem;
+    margin: 0 10px;
+  }
+}
+
+@media (max-width: 768px) {
+  .visualiser-split {
+    flex-direction: column;
+  }
+
+  .visualiser-split.dual {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  .visualiser-split.dual {
+    flex-direction: column;
+  }
+}
